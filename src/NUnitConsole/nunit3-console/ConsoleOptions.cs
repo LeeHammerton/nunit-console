@@ -30,6 +30,10 @@ namespace NUnit.Common
         /// </summary>
         protected readonly IFileSystem _fileSystem;
 
+        public ConsoleOptions() : this(new DefaultOptionsProvider(), new FileSystem())
+        {
+        }
+
         internal ConsoleOptions(IDefaultOptionsProvider defaultOptionsProvider, IFileSystem fileSystem, params string[] args)
         {
             // Apply default options
